@@ -23,7 +23,6 @@
     margin-top: 15px;
     color: #999999;
     display: flex;
-    padding-right: 5px;
   }
   &__editbutton {
     display: block;
@@ -35,14 +34,38 @@
     padding: 0 20px;
     text-decoration: none;
   }
-
-
 }
 
 
 .message {
   height: calc(100vh - 190px);
   background-color: #fafafa;
+  box-sizing: border-box;
+  padding: 35px 40px 0;
+  overflow: scroll;
+  &__box {
+    margin-bottom: 46px;
+  }
+  &__info{
+    display: flex;
+    &__username{
+      font-size: 16px;
+      color: #333333;
+      font-weight: bold;
+    }
+    &__data {
+      font-size: 12px;
+      color: #999999;
+      padding-left: 10px;
+    }
+  }
+  &__text {
+    margin-top: 12px;
+    &__content {
+      font-size: 14px;
+      color: #434A54;
+    }
+  }
 }
 
 .form {
