@@ -1,0 +1,112 @@
+.main-chat {
+  width: calc(100vw - 300px);
+  height: 100vh;
+  background-color: #eeeeee;
+}
+
+.main-header {
+  height: 100px;
+  background-color: #ffffff;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  &__group {
+    display: block;
+  }
+  &__group__name {
+    font-size: 20px;
+    margin-top: 35Px;
+    color: #333333;
+  }
+  &__member__list {
+    font-size: 12px;
+    margin-top: 15px;
+    color: #999999;
+    display: flex;
+  }
+  &__edit__button {
+    display: block;
+    border: 1px solid #38AEF0;
+    color: #38AEF0;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 28px;
+    padding: 0 20px;
+    text-decoration: none;
+  }
+}
+
+.message {
+  height: calc(100vh - 190px);
+  background-color: #fafafa;
+  box-sizing: border-box;
+  padding: 35px 40px 0;
+  overflow: scroll;
+  &__box {
+    margin-bottom: 46px;
+  }
+  &__info {
+    display: flex;
+    &__user__name{
+      font-size: 16px;
+      color: #333333;
+      font-weight: bold;
+    }
+    &__data {
+      font-size: 12px;
+      color: #999999;
+      padding-left: 10px;
+    }
+  }
+  &__text {
+    margin-top: 12px;
+    &__content {
+      font-size: 14px;
+      color: #434A54;
+    }
+  }
+}
+
+.footer {
+  height: 90px;
+  background-color: #d2d2d2;
+  padding: 20px 50px 20px 40px;
+
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    &__box {                                                                                                                                                                                                                   
+      width: 100%;
+      background-color: #ffffff;
+      position: relative;
+      &__input__text {
+        border: none;
+        height: 50px;
+        width: 100%;
+        padding: 0 45px 0 15px;
+      }
+      &__input__image {
+        height: 50px;
+        right: 10px;
+        position: absolute;
+        .fa-image {
+          line-height: 50px;
+          font-size: 25px;
+        }
+      &__hidden { 
+        display: none;
+        }
+      }
+    }
+  }
+}
+
+.submit-btn {
+  background-color: #38AEF0;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  height: 50px;
+  margin-left: 15px;
+  padding: 0 30px;
+}

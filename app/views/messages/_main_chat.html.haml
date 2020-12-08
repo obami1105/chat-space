@@ -1,0 +1,32 @@
+.main-chat
+  .main-header
+    .main-header__group
+      .main-header__group__name TECH::Kagawa
+      %ul.main-header__member__list 
+        Member:
+        %li.main-header__member
+          kimika
+    %a.main-header__edit__button{ href: '#' } Edit
+
+  .message
+    .message__box 
+      .message__info
+        .message__info__user__name
+          kimika
+        .message__info__data
+          2020年12月07日 13時00分
+      .message__text
+        %p.message__text__content
+          いい天気♪
+          
+  .footer
+    .footer__form
+      .footer__form__box
+        %input.footer__form__box__input__text{ type: "text", placeholder: "type a message",name: "", id: "" }
+        %label.footer__form__box__input__image
+          = icon('fas', 'image')
+          %input.footer__form__box__input__image__hidden{type: "file"}
+      %input.submit-btn{type: "submit", value: "Send"}
+
+    -# %input.input-text{:placeholder => "type a message", :type => "text"}
+
