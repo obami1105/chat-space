@@ -1,17 +1,18 @@
 .side-bar
   .side-header
     .side-box__list
-      %h3.side-box__list__username kimika
-      %ul.side-box__list__iconlist
+      %h3.side-box__list__username
+        = current_user.name
+      %ul.side-box__list__icon__list
         %li.side-box__list__icon
-          %a{href: '#'}
+          = link_to '#' do
             = icon('far', 'edit')
         %li.side-box__list__icon
-          %a{href: '#'}
+          = link_to edit_user_path(current_user) do
             = icon('fas', 'cog')
 
   .groups
     .group
-      %a{href: '#'}
+      = link_to '#' do
         .group__name TECH::Kagawa
         .group__message 眠いな(_ _).｡o○
