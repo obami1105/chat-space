@@ -5,7 +5,7 @@
         = current_user.name
       %ul.side-box__list__icon__list
         %li.side-box__list__icon
-          = link_to '#' do
+          = link_to new_group_path do
             = icon('far', 'edit')
         %li.side-box__list__icon
           = link_to edit_user_path(current_user) do
