@@ -12,7 +12,10 @@
             = icon('fas', 'cog')
 
   .groups
-    .group
-      = link_to '#' do
-        .group__name TECH::Kagawa
-        .group__message 眠いな(_ _).｡o○
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#', class:"group" do 
+          .group__name 
+            = group.name
+          .group__message 
+            メッセージはまだありません
