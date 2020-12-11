@@ -1,7 +1,8 @@
 .main-chat
   .main-header
     .main-header__group
-      .main-header__group__name TECH::Kagawa
+      .main-header__group__name 
+        = 
       %ul.main-header__member__list 
         Member:
         %li.main-header__member
@@ -9,21 +10,13 @@
     %a.main-header__edit__button{ href: '#' } Edit
 
   .message
-    .message__box 
-      .message__info
-        .message__info__user__name
-          kimika
-        .message__info__data
-          2020年12月07日 13時00分
-      .message__text
-        %p.message__text__content
-          いい天気♪
-          
+    = render @messages
+
   .footer
-    .footer__form
+    = form_with model: [@group, @message], html: {class: "footer__form"}, local: true do |f|
       .footer__form__box
-        %input.footer__form__box__input__text{ type: "text", placeholder: "type a message",name: "", id: "" }
-        %label.footer__form__box__input__image
-          = icon('fas', 'image')
-          %input.footer__form__box__input__image__hidden{type: "file"}
-      %input.submit-btn{type: "submit", value: "Send"}
+        = f.text_field :content, class: 'footer__form__box__input__text', placeholder: 'type a message'
+        = f.label :image, class: 'footer__form__box__input__image' do
+          = icon('far', 'image', class: 'footer__icon')
+          = f.file_field :image, class: 'footer__form__box__input__image__hidden'
+      = f.submit 'Send', class: 'submit-btn'
