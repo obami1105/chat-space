@@ -24,6 +24,9 @@
     color: #999999;
     display: flex;
   }
+  &__member {
+    padding-right: 5px;
+  }
   &__edit__button {
     display: block;
     border: 1px solid #38AEF0;

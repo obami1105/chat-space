@@ -2,11 +2,12 @@
   .main-header
     .main-header__group
       .main-header__group__name 
-        = 
+        = @group.name
       %ul.main-header__member__list 
-        Member:
-        %li.main-header__member
-          kimika
+        Member：
+        - @group.users.each do |user|
+          %li.main-header__member
+            = user.name
     %a.main-header__edit__button{ href: '#' } Edit
 
   .message
