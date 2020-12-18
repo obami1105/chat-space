@@ -1,3 +1,6 @@
 $(function(){
-  console.log("jQueryを導入した")
-});
+  $('.footer__form').on('submit', function(e){
+    e.preventDefault()
+    console.log("hoge")
+  })
+})
